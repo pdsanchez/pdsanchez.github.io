@@ -1,12 +1,17 @@
 # main links
 main:
   - title: "Quick-Start Guide"
-    url: https://pdsanchez.github.io/docs/quick-start-guide/
+    url: /docs/ug-quick-start-guide/
   - title: "About"
-    url: https://pdsanchez.github.io/about/
-  - title: "Sample Posts"
-    url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+    url: /docs/about/
+
+    # documentation links
+docs:
+  - title: User Guide
+    children:
+      - title: "Quick-Start Guide"
+        url: /docs/ug-quick-start-guide/
+      - title: "Configuration"
+        url: /docs/ug-configuration/
+      - title: "Release Notes"
+        url: https://github.com/pdsanchez
