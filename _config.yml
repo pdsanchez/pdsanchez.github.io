@@ -5,6 +5,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:3.8 jekyll serve --livereload --verbose
+
 # Theme Settings
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
@@ -19,14 +21,14 @@ locale                   : "es-ES" # "en-US"
 title                    : "pdsanchez"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Pablo D"
+name                     : "Pablo D. Sánchez"
 description              : "Soluciones"
 url                      : "https://pdsanchez.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "pdsanchez/pdsanchez.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/88x88.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "masthead_title" # overrides the website title displayed in the masthead, use " " for no title
+logo                     : "/assets/images/space_88x88.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "pdsanchez" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -93,9 +95,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Pablo D"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Soluciones"
+  name             : "Pablo D. Sánchez"
+  avatar           : "/assets/images/space.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Soluciones Big Data"
   location         : "Spain"
   email            :
   links:
@@ -114,6 +116,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://pdsanchez.github.io/"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://es.linkedin.com/in/pdsanchez"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -127,9 +132,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://pdsanchez.github.io/"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://es.linkedin.com/in/pdsanchez"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
@@ -259,6 +264,10 @@ compress_html:
   ignore:
     envs: development
 
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -268,10 +277,20 @@ defaults:
       type: pages
     values:
       layout: single
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
       author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
   # _docs
   - scope:
-      path: "_docs"
+      path: ""
       type: docs
     values:
       layout: single
@@ -281,14 +300,3 @@ defaults:
       comments: false
       sidebar:
         nav: "docs"
-  # _posts
-  - scope:
-      path: "_posts"
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true

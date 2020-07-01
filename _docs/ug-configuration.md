@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-permalink: /docs/ug-configuration/
+permalink: /ug-configuration/
 excerpt: "How to configure Hyperspace for your needs."
 last_modified_at: 2020-06-23
 toc: false
