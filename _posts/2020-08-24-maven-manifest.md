@@ -17,7 +17,7 @@ Añadir información sobre versión y cambion en el fichero MANIFEST.MF al compi
         <archive>
             <manifestEntries>
                 <version>${version}</version>
-                <inf-20200820>#273 - Corregir excepción F1 Failed [vs. ${version}]</inf-20200820>
+                <inf-20200820>#273 - Corregir excepción [vs. ${version}]</inf-20200820>
             </manifestEntries>
         </archive>
     </configuration>
