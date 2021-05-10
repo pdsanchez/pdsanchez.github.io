@@ -12,3 +12,6 @@ Pinchar en el signo + (Add -> Live Template)
 Dar un nombre en el campo "Abbreviation"
 
 Pegar el código que nos interesa en "Template text"
+
+
+NOTA: CTRL+J muestra los templates disponibles
